@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .elements {
+            display: grid;
+            grid-template-rows: repeat(2,80px);
+        }
+        .elements .other {
+            display: grid;
+            grid-template-columns: repeat(2,200px);
+            gap: 35px;
+        }
+        .text, #film {
+            font-size: 17px;
+            margin-bottom: 15px;
+            color:rgb(80, 80, 80);
+        }
+        #time {
+            width: 45%;
+        }
+        .link {
+            display: flex;
+            text-decoration: none;
+            color: white;
+            align-self: center;
+        }
+        .button {
+            margin: 0;
+            width: 140px;
+            height: 35px;
+            background-color: rgb(34, 34, 34);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .link {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+        #film {
+            border: none;
+            outline: none;
+        }
+        .type {
+            margin-top: 20px;
+        }
+        select {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="elements">
+        <div class="title">
+            <span class="text">
+                Название фильма:
+            </span><br>
+            <input class="type" id="film" type="text" placeholder="Название фильма">
+        </div>
+        <div class="other">
+            <div class="f">
+                <span class="text">
+                    Кинотеатры:
+                </span><br>
+                <select class="type">
+                    <option>Кинотеатр Paramount City</option>
+                    <option>Кинотеатр Chaplin</option>
+                    <option>Кинотеатр Kinopark</option>
+                </select>
+            </div>
+            <div class="s">
+                <span class="text">
+                    Время сеанса:
+                </span> <br>
+                <select class="type" id="time">
+                    <option>21</option>
+                    <option>22</option>
+                    <option>00</option>
+                </select> 
+                <select class="type" id="time">
+                    <option>30</option>
+                    <option>45</option>
+                    <option>10</option>
+                </select>     
+            </div>
+            <a class="link" href="#">
+                <div class="button">
+                    <span class="link">
+                        Выбрать фильм
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
